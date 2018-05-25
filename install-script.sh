@@ -23,7 +23,7 @@ mkdir /data/db
 # Install Python3 and pip (may already be installed)
 # -------------------------------------------------
 echo -e "\n--- Installing Python 3 + pip3 --"
-sudo apt-get install python3 python3-pip
+sudo apt-get install python3 python3-pip -y
 
 # -------------------------------------------------
 # Install Go - Current version is 1.10.2, needs to be updated if newer version is released
@@ -45,7 +45,7 @@ sudo apt install -y mongodb-org
 # Install mySQL (may already be present)
 # -------------------------------------------------
 echo -e "\n---- Install MySQL ----"
-sudo apt-get install mysql-server
+sudo apt-get install mysql-server -y
 
 #--------------------------------------------------
 # Install PostgreSQL Server
@@ -62,7 +62,7 @@ sudo apt-get install postgresql -y
 # Install nginx web server
 # -------------------------------------------------
 echo -e "\n---- Install NGINX ----"
-sudo apt install nginx
+sudo apt install nginx -y
 
 # -------------------------------------------------
 # Install docker
@@ -78,13 +78,13 @@ sudo apt-get install -y docker-ce
 # Install Node
 # -------------------------------------------------
 echo -e "\n---- Install Node ----"
-sudo apt-get install nodejs
+sudo apt-get install nodejs -y
 
 # -------------------------------------------------
 # Install NPM Package Manager
 # -------------------------------------------------
 echo -e "\n---- Install NPM ----"
-sudo apt-get install npm
+sudo apt-get install npm -y
 
 # -------------------------------------------------
 # Export paths
