@@ -32,6 +32,7 @@ echo -e "\n---- Install Go ----"
 sudo curl -O https://storage.googleapis.com/golang/go1.10.2.linux-amd64.tar.gz
 sudo tar -xvf go1.10.2.linux-amd64.tar.gz
 sudo mv go /usr/local
+sudo rm go1.10.2.linux-amd64.tar.gz 
 
 # -------------------------------------------------
 # Install MongoDB - Specific to Ubuntu 18.04 but may work on other debian flavors
