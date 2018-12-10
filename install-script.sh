@@ -3,6 +3,7 @@
 # Get the latest updates at the start
 sudo apt-get update
 sudo apt upgrade -y
+apt-get install tree
 # Make necessary directories
 profile="~/.profile"
 if [ -f "$profile" ]
@@ -29,17 +30,17 @@ sudo apt-get install python3 python3-pip -y
 # Install Go - Current version is 1.10.2, needs to be updated if newer version is released
 # -------------------------------------------------
 echo -e "\n---- Install Go ----"
-sudo curl -O https://storage.googleapis.com/golang/go1.10.2.linux-amd64.tar.gz
-sudo tar -xvf go1.10.2.linux-amd64.tar.gz
+sudo curl -O https://storage.googleapis.com/golang/go1.11.2.linux-amd64.tar.gz
+sudo tar -xvf go1.11.2.linux-amd64.tar.gz
 sudo mv go /usr/local
-sudo rm go1.10.2.linux-amd64.tar.gz 
+sudo rm go1.11.2.linux-amd64.tar.gz 
 
 # -------------------------------------------------
 # Install MongoDB - Specific to Ubuntu 18.04 but may work on other debian flavors
 # -------------------------------------------------
 echo -e "\n---- Install MongoDB ----"
 sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv 2930ADAE8CAF5059EE73BB4B58712A2291FA4AD5
-echo "deb [ arch=amd64,arm64 ] https://repo.mongodb.org/apt/ubuntu xenial/mongodb-org/3.6 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-3.6.list
+echo "deb [ arch=amd64 ] https://repo.mongodb.org/apt/ubuntu bionic/mongodb-org/4.0 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-4.0.list
 sudo apt install -y mongodb-org
 
 # -------------------------------------------------
